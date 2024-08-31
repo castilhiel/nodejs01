@@ -23,13 +23,13 @@ const server = fastify();
 server.get("/videoList", async (request) => {
   const search = request.query.search;
 
-  //   const videoList = await dataBasePostgres.list(search);
+  const videoList = await dataBasePostgres.list(search);
 
-  //   return videoList;
+  return videoList;
 
   // =================================================
 
-  return dataBaseMemory.list(search);
+  //   return dataBaseMemory.list(search);
 });
 
 server.post("/newVideo", (request, response) => {
