@@ -1,0 +1,27 @@
+GET http://localhost:3333/videoList
+
+###
+GET http://localhost:3333/videoList?search=gabriel
+
+###
+POST http://localhost:3333/newVideo
+Content-Type: application/json
+
+{
+    "title": "aaaaaaaaaaaa",
+    "description": "uaaaaaaaaaaa",
+    "duration": 111
+}
+
+###
+PUT http://localhost:3333/updateVideo/198e2ba2-b200-4dfa-8422-05a828e0837e
+Content-Type: application/json
+
+{
+    "title": "ppppppppppppppppp",
+    "description": "rtyrtyrtyrtytry",
+    "duration": 555
+}
+
+###
+DELETE http://localhost:3333/deleteVideo/198e2ba2-b200-4dfa-8422-05a828e0837e
